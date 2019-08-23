@@ -1,0 +1,29 @@
+{
+  "name": "test_code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./bin/www",
+    "server": "babel-node ./src/bin/www",
+    "dev": "NODE_ENV=development npm-run-all server",
+    "babel": "babel-node ./test/index.js"
+  },
+  "dependencies": {
+    "@scatterjs/core": "^2.7.44",
+    "@scatterjs/eosjs": "^1.5.27",
+    "@scatterjs/web3": "^1.5.30",
+    "ejs": "^2.6.2",
+    "eosjs": "16.0.9",
+    "express": "^4.17.1",
+    "web3": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/runtime": "^7.5.5",
+    "body-parser": "^1.19.0"
+  }
+}
