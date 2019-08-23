@@ -8,6 +8,7 @@ const web3 = new Web3('http://localhost:8545');
 router.post('/', (req, res) => {
     const password = req.body.psw;
 
+
     async function create_acc(password) {
         const test_account = await web3.eth.personal.newAccount(password);
 
@@ -18,6 +19,7 @@ router.post('/', (req, res) => {
 
         res.render('account', { acc: test_a, title: 'account' });
     }
+
 
     create_acc(password);
 });
