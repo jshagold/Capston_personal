@@ -6,22 +6,25 @@ const web3 = new Web3('http://localhost:8545');
 
 
 router.post('/', (req, res) => {
-    const password = req.body.psw;
+    const key = req.body.psw;
 
 
-    async function create_acc(password) {
-        const test_account = await web3.eth.personal.newAccount(password);
+    async function create_acc(key) {
+        //const test_account = await web3.eth.personal.newAccount(password);
+        //const test_a = await test_account;
 
-        //var test_a = JSON.stringify(test_account);
-        //var private_key = test_account.address;
-        //web3.eth.defaultAccount = private_key;
-        const test_a = await test_account;
+        const test_account = await web3.eth.accounts.privateKeyToAccount(key);
 
-        res.render('account', { acc: test_a, title: 'account' });
+        //var pri_addr = JSON.stringify(test_account);
+        var test_addr = test_account.address;
+        var test_pri = test_account.privateKey;
+        
+
+        res.render('account', { addr: test_addr, private: test_pri, title: 'account' });
     }
 
 
-    create_acc(password);
+    create_acc(key);
 });
 
 export default router;

@@ -10,6 +10,7 @@ router.get('/', async (req, res) => {
 
     async function getData() {
             const accounts = await web3.eth.getAccounts();
+
             res.render('main', { title: 'main', acc: accounts });
     }
     getData();

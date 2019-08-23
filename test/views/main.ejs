@@ -7,12 +7,19 @@
 
 <body>
     <h1>Hallo! This page is preparing page for Scatter</h1>
-    <p>here are your accounts</p>
-    <p><%= acc %></p>
+    <p>here is accounts list</p>
+
+    <div>
+        <% for(let value of acc) { %>
+        <p><%= value %></p>       
+        <% } %>
+    </div>
+
+
 
     <br>
     <form action="/add" method="POST">
-        <p>input your password : </p>
+        <p>input your private key : </p>
         <input type="text" name="psw">
 
         <input type="submit" value="put">
