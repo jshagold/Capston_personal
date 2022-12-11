@@ -15,7 +15,7 @@
     "@scatterjs/web3": "^1.5.30",
     "ejs": "^2.6.2",
     "eosjs": "16.0.9",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "web3": "^1.2.1"
   },
   "devDependencies": {
